@@ -1,0 +1,921 @@
+html, body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+
+                        /* HEADER */
+.NavbarWrap{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.Log{
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    display: flex;
+    width: 100%; 
+    height: 100px;
+    background-color: black;
+    color: white;
+    align-items: center; 
+}
+.container{
+    position: absolute;
+    right: 0;
+    display: flex;
+    width: 100%; 
+    height: 70px;
+    color: white;
+    align-items: center;
+    justify-content: flex-end; /* Выровнять содержимое вправо */
+}
+
+.links{
+    position: absolute;
+    right: 0;
+    display: flex;
+    list-style-type: none; /* Удалить маркеры списка */
+}
+
+.links li{ 
+    display: inline-block;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.links a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.Logotyp{
+    color: white;
+    margin-top: 20px;
+    font-size: 60px;
+    font-weight: 400;
+    text-decoration: none;
+    margin-left:30px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+                            /* Burger */
+
+#burger {
+    display: none;
+    background-color:black;
+    border: none;
+    cursor: pointer;
+    position: absolute; /* Изменено на absolute для позиционирования внутри контейнера */
+    width: 30px;
+    height: 30px;
+    top: 20px; /* Расположение по вертикали */
+    right: 20px; /* Расположение по горизонтали */
+    z-index: 20; /* Обеспечивает, что бургер-меню будет поверх других элементов */
+}
+
+#burger::before,
+#burger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    transition: transform 0.3s, opacity 0.3s; /* Добавлено opacity для плавного исчезновения middle line */
+}
+
+#burger::before {
+    top: 8px;
+}
+
+#burger::after {
+    top: 20px;
+}
+
+#burger.open::before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#burger.open::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+
+
+
+                                                /* Body_UnderHeader */
+
+
+.UnderHeader{
+    display: flex;
+    margin-top: -220px;
+    width: 100%;
+    height: 600px;
+    background-image: url(Foto/MainFoto.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center
+    
+}
+
+
+.box_UnderHeader{
+    width: 100%;
+    display: flex;
+    width: 100%;
+    height: 600px;
+    background-color: black;
+    opacity: .2;
+}
+
+.text_UnderHeader{
+    width: 100%;
+    height: 600px;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.text_UnderHeader h1{
+    margin-top: 5%;
+    font-size: 60px;
+    font-weight: 600;
+    
+}
+
+.text_UnderHeader h2{
+    font-size: 30px;
+    margin-top: -30px;
+}
+
+.ButtonUndderHeader{
+    font-size:  28px;
+    font-weight: 500;
+    border-radius: 30px;
+    border: 3px solid black;
+    width: 160px;
+    height: 50px;
+    color: black;
+    background:transparent ;/*дает прозравчность кнопку */
+    transition: all .3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+
+.ButtonUndderHeader:hover {
+    background-color: black;
+    color: white;
+} 
+
+
+                        /* Foto_For_Sale */
+
+
+.Foto_For_Sale{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.containerFotoSale{
+    margin-top: 3%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.ContainerForFoto{
+    margin: 30px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContainerForFoto h1{
+    text-align: center;
+    position: absolute;
+    display: flex;
+    color: white;
+    font-size: 40px;
+}
+
+
+                            /* UnderSale_Text */
+
+
+.UnderSale_Text{
+    width: 100%;
+    height: 700px;
+    margin-top: 20px;
+    background-image: url(Foto/UndderSale.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center ;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.TextUnderSale{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.ForTextUnderSals{
+    width: 40%;
+}
+
+.ForTextUnderSals h1{
+    color: black;
+    font-size: 50px;
+    text-decoration: underline solid black;
+}
+
+.ForTextUnderSals p{
+    color: white;
+    font-size: 25px;
+}
+
+                            /* Pictures */
+
+.Pictures{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+
+
+                        /* Arials Slider */
+
+.Arials {
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    height: 800px;
+    position: relative;
+    text-align: center;
+}
+
+.containerArials {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.ArialsSlider {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Slide {
+    display: none;
+    margin: 60px;
+    flex: 1 0 auto;
+}
+
+.Slide.active {
+    display: block;
+}
+
+#ButtonL, #ButtonR {
+    position: absolute;
+    background-color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#ButtonL {
+    left: 10px;
+}
+
+#ButtonR {
+    right: 10px;
+}
+
+                /* Link_on_instagram  */
+
+
+.Link_on_instagram{
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.Link_on_instagram .text a{
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+
+                /* Omg-Links */
+.img-Links{
+    margin-bottom: 100px;
+}
+
+.img_container{
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.conInstOne{
+    width: 30%;
+    margin: 30px;
+    background-image: url(Foto/inst1.avif);
+    height: 500px;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.boxBlack {
+    color: white;
+    background-color: black;
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.boxBlack:hover {
+    opacity: 0.5; 
+}
+
+.conInstTwo{
+    width: 30%;
+    margin: 30px;
+    background-image: url(Foto/inst2.avif);
+    height: 500px;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.conInstThree{
+    width: 30%;
+    margin: 30px;
+    background-image: url(Foto/inst3.avif);
+    height: 500px;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.conInstForth{
+    width: 30%;
+    margin: 30px;
+    background-image: url(Foto/inst4.avif);
+    height: 500px;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+.conInstFifth{
+    width: 30%;
+    margin: 30px;
+    background-image: url(Foto/inst5.jpg);
+    height: 500px;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+.conInstSix{
+    width: 30%;
+    margin: 30px;
+    background-image: url(Foto/inst6.jpg);
+    height: 500px;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+
+.instImg{
+   height: 5%;
+    width: 100%;
+    
+   
+}
+
+.conBox{
+    height: 5%;
+    width: 100%;
+    background-color: black;
+   
+}
+
+                    /* FooterForm */
+
+.FooterForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    height: 400px;
+    color: white;
+}
+.footerCon{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.from{
+    width: 40%;
+    display: block;
+    font-size: 12px;
+    
+}
+input {
+    width: 100%;
+    display: block;
+    height: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 5px;
+}
+
+input:hover {
+    border: 1px solid white;
+}
+
+#FormBtn{
+    width: 100%;
+    height: 30px;
+    font-size: 22px;
+    font-weight: 600;
+    border: none;
+    margin-top: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: all .6s ease;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+
+#FormBtn:hover{
+   background-color: rgb(161, 161, 161);
+    color: white;
+}
+
+.info{
+    font-size: 10px;
+    display: block;
+}
+
+@media(max-width: 450px){
+    
+    #burger{
+        display: block;
+    }
+    #container{
+        display: block;
+    }
+    
+    .container{
+        display: block;
+    }
+    
+    .links{
+        z-index: 1;
+        text-align: center;
+        width: 400px;
+        margin-top: 50px;
+        background-color: black;
+        position: absolute;
+        right: -450px;
+        display: block;
+        list-style-type: none; /* Удалить маркеры списка */
+    }
+    
+    .links li{ 
+        flex-direction: column;
+        display: block;
+        margin: 20px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    
+    .links a{
+        text-decoration: none;
+        color: white;
+    }
+
+
+                    /*  Body_UnderHeader */
+    
+
+    .text_UnderHeader h1{
+        margin-top: 25%;
+        font-size: 35px;
+        font-weight: 600;
+        
+    }
+
+    .text_UnderHeader h2{
+        font-size: 20px;
+        margin-top: -30px;
+    }
+
+                    /* Foto_For_Sale */
+
+    .Foto_For_Sale{
+    margin-top: 50px;
+    position: relative;
+    display: block;
+    width: 100%;
+    }
+
+    .containerFotoSale{
+    margin: 0;
+    display: block;
+    width: 100%;
+    }
+
+    .ContainerForFoto{
+        width: 100%;
+        margin: 0;
+    }
+
+    .ContainerForFoto h1{
+        text-align: center;
+        position: absolute;
+        display: flex;
+        color: white;
+        font-size: 30px;
+    }
+
+    .img{
+        width: 100%;
+    }
+    
+                    /* UnderSale_Text */
+
+
+.ForTextUnderSals{
+    width: 100%;
+}
+
+.ForTextUnderSals h1{
+    color: black;
+    font-size: 40px;
+    text-decoration: underline solid black;
+}
+
+.ForTextUnderSals p{
+    color: white;
+    font-size: 25px;
+    
+}
+
+                            /* Pictures */
+
+.Pictures{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 700px;
+}
+.PicturesContainer{
+    width: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+.PicturesContainer img{
+    margin: 30px;
+    margin-left: 20%;
+}
+
+
+                        /* Arials Slider */
+
+.Arials {
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    height: 600px;
+    position: relative;
+    text-align: center;
+}
+
+.containerArials {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.ArialsSlider {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Slide {
+    display: none;
+    margin: 0px;
+    flex: 1 0 auto;
+}
+
+.Slide.active {
+    display: block;
+}
+
+.Slide h2{
+    margin-top: -30px;
+}
+
+#ButtonL, #ButtonR {
+    position: absolute;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#ButtonL {
+    left: 10px;
+}
+
+#ButtonR {
+    right: 10px;
+}
+
+.img{
+    width: 80%;
+}
+
+
+
+                /* Link_on_instagram  */
+
+
+.Link_on_instagram{
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.Link_on_instagram .text a{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+
+                /* Omg-Links */
+.img-Links{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+
+
+.boxBlack {
+    color: white;
+    background-color: black;
+    width: 100%;
+    height: 100px;
+}
+
+.conInstOne{
+    width: 30%;
+    margin: 5px;
+    background-image: url(Foto/inst1.avif);
+    height: 100px;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.conInstTwo{
+    width: 30%;
+    margin: 5px;
+    background-image: url(Foto/inst2.avif);
+    height: 100px;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.conInstThree{
+    width: 30%;
+    margin: 5px;
+    background-image: url(Foto/inst3.avif);
+    height: 100px;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.conInstForth{
+    width: 30%;
+    margin: 5px;
+    background-image: url(Foto/inst4.avif);
+    height: 100px;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+.conInstFifth{
+    width: 30%;
+    margin: 5px;
+    background-image: url(Foto/inst5.jpg);
+    height: 100px;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+.conInstSix{
+    width: 30%;
+    margin: 5px;
+    background-image: url(Foto/inst6.jpg);
+    height: 100px;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+
+.instImg{
+   height: 5%;
+    width: 100%;
+    
+   
+}
+
+.conBox{
+    height: 5%;
+    width: 100%;
+    background-color: black;
+   
+}
+
+
+                   /* FooterForm */
+
+.FooterForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    height: 400px;
+    color: white;
+}
+.footerCon{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.from{
+    width: 80%;
+    display: block;
+    font-size: 12px;
+}
+input {
+    width: 100%;
+    display: block;
+    height: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+input:hover {
+    border: 1px solid white;
+}
+
+#FormBtn{
+    width: 100%;
+    height: 30px;
+    font-size: 22px;
+    font-weight: 600;
+    border: none;
+    margin-top: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: all .6s ease;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+
+#FormBtn:hover{
+   background-color: rgb(161, 161, 161);
+    color: white;
+}
+
+.info{
+    font-size: 13px;
+    display: block;
+}
+
+
+}
